@@ -5,10 +5,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Puzzle {
-    /*public static void main(String[] args) {
+    public  static  Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) {
         issueName();
     }
     public static void issueName(){
+        int score = 99;
         String[] words = new String[]
                 {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli",
                         "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi",
@@ -18,20 +20,26 @@ public class Puzzle {
         int nameRandomWords = random.nextInt(words.length);
         System.out.println("Угадайте загаданное слово");
 
-        Scanner scanner = new Scanner(System.in);
+        /*
+        char data[] = {'a', 'b', 'c', 'd', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n',
+                'o', 'p', 'q', 'r', 's','t', 'u', 'v', 'w', 'x', 'y', 'z'};
+        String str = new String(data);
+        */
+        
         System.out.println("Напишите ваше слово: ");
 
         for (int i = 0; i < 10; i++) {
-            int myWord = scanner.nextInt();
+            String myWord = scanner.next();
 
             if (myWord.equals(nameRandomWords)) {
                 System.out.println("Вы угадали слово! Поздравляю! " + "\nПравильное слово: " + nameRandomWords);
                 break;
             } else {
-                System.out.println("Попробуйте снова! У вас получится! " + nameRandomWords);
+                System.out.println("Попробуйте снова!  " + score + nameRandomWords);
+                score --;
             }
         }
         scanner.close();
 
-    }*/
+    }
 }

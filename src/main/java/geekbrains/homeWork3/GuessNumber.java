@@ -35,7 +35,7 @@ public class GuessNumber {
                 System.out.println("Вы проиграли!");
         }
 
-        System.out.println("Повторить игру еще раз? 1 - да / 0 - нет");
+        System.out.println("Повторить игру еще раз? 1 - да хочу. / 0 - нет устал!");
         int yesNo = scanner.nextInt();
         while (true){
             if (yesNo == 1){
